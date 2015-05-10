@@ -50,7 +50,7 @@ Implement these linear algebra functions:
 * matrix multiplication by a vector
 * matrix multiplication by a matrix
 
-These functions are all defined in [the formulas notebook](Formulas.ipynb) included with this assignment.
+These functions are all defined in [the formulas notebook](Formulas.ipynb) included with this assignment as well as the [tests](test_matrix_math.py).
 
 These functions must:
 
