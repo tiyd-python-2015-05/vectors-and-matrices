@@ -1,8 +1,8 @@
-# Matrix Math
+# Vector and Matrix Math
 
 ## Description
 
-Implement various matrix math functions using no math libraries.
+Implement various vector and matrix math functions using no math libraries.
 
 ## Objectives
 
@@ -10,8 +10,9 @@ Implement various matrix math functions using no math libraries.
 
 After completing this assignment, you should understand:
 
-* 2 Dimensional List traversal
-* Introductory Linear Algebra concepts
+* List comprehensions
+* Introductory linear algebra concepts
+* Raising exceptions
 
 ### Performance Objectives
 
@@ -23,83 +24,42 @@ After completing this assignment, you should be able to:
 
 ### Deliverables
 
-* A Git repo called matrix-math containing at least:
+* A Git repo called vectors-and-matrices containing at least:
   * `README.md` file explaining how to run your project
-  * a module called `matrix-math`
-  * tests for `matrix-math`
+  * a module called `matrix_math`
+  * tests for `matrix_math`
 
 ### Requirements
 
 * Passing unit tests
 * No PEP8 or Pyflakes warnings or errors
-* No use of math libraries - only built in `+ - / *` operators
+* No use of third-party libraries - only built in `+ - / *` operators and the `math` module
+* **No use of `for` or `while` loops**
 
 ## Normal Mode
 
-Implement these Linear Algebra functions:
+Implement these linear algebra functions:
 
-Matrix Addition:
+* vector addition and subtraction
+* vector multiplication by a scalar
+* mean of multiple vectors
+* dot product
+* magnitude
+* matrix addition and subtraction
+* matrix multiplication by a scalar
+* matrix multiplication by a vector
+* matrix multiplication by a matrix
 
-*Shape Rule: Dimensions of each matrix must be the same.*
+These functions are all defined in [the formulas notebook](Formulas.ipynb) included with this assignment.
 
-```
-[[a b]   +  [[w x]   =   [[a+w b+x]
- [c d]]      [y z]]       [c+y d+z]]
+These functions must:
 
-Matrix + Matrix = Matrix
-```
-
-Matrix-Scalar Multiplication:
-
-*Shape Rule: None*
-
-```
-[[a b]   *  Z   =   [[a*Z b*Z]
- [c d]]              [c*Z d*Z]]
-
-Matrix * Scalar = Matrix
-```
-
-Matrix-Vector Multiplication:
-
-*Shape Rule: The number of rows of the vector must equal the number of columns of the matrix.*
-
-```
-[[a b]   *  [x   =   [a*x+b*y
- [c d]       y]       c*x+d*y
- [e f]                e*x+f*y]
-
-Matrix * Vector = Vector
-```
-
-Matrix-Matrix Multiplication:
-
-*Shape Rule: The number of columns of the first matrix must equal the number of rows of the second matrix.*
-
-```
-[[a b]   *  [[w x]   =   [[a*w+b*y a*x+b*z]
- [c d]       [y z]]       [c*w+d*y c*x+d*z]
- [e f]                    [e*w+f*y e*x+f*z]]
-
-Matrix * Matrix = Matrix
-```
-
-* Create asserts that ensure that the function returns a correctly calculated data structure
-* Create each function according to the above specifications
-* Each function should check the shape of the incoming matrix/vector before any calculations
-* Refactor as much reusable code as possible
-
-## Hard Mode
-
-In addition to the requirements from **Normal Mode**:
-
-* Implement the above functions without using any `for` loops
-
-## Notes
-
+* Check the shape of the incoming vector or matrix before any calculations
+* Reuse any duplicated code
 
 ## Reading
 
-[Linear Algebra Review and Reference](http://cs229.stanford.edu/section/cs229-linalg.pdf)
-
-[Traversing a two-dimensional "array"](https://mail.python.org/pipermail/tutor/2008-June/062425.html)
+* [List Comprehension documentation](https://docs.python.org/3/tutorial/datastructures.html#list-comprehensions)
+* [How to Use List Comprehensions By Example](http://howchoo.com/g/ngi2zddjzdf/how-to-use-list-comprehension-in-python)
+* [Math Insight: Vector Algebra](http://mathinsight.org/thread/vector_algebra#matrices)
+* [Khan Academy on Linear Algebra](https://www.khanacademy.org/math/linear-algebra)
